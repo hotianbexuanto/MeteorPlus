@@ -357,8 +357,8 @@ public class XrayBruteforce extends Module {
         .name("y-range")
         .description("Bruteforce range.")
         .defaultValue(13)
-        .min(3)
-        .sliderRange(3, 255)
+        .min(-64)
+        .sliderRange(-64, 255)
         .build()
     );
 
