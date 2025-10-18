@@ -1029,7 +1029,7 @@ public class XrayBruteforce extends Module {
 					}
 				}
 				else if (b == null) {
-					y = Utils.random(mc.player.getBlockPos().getY() -y_range.get(), mc.player.getBlockPos().getY() + y_range.get());
+					y = Utils.random(mc.player.getBlockPos().getY() - Math.abs(y_range.get()), mc.player.getBlockPos().getY() + Math.abs(y_range.get()));
 					if (!scanned.contains(new BlockPos(x, y, z))) {
 						addBlock(new BlockPos(x, y, z), false);
 					}
@@ -1037,7 +1037,7 @@ public class XrayBruteforce extends Module {
 			}
         }
 		else {
-			y = Utils.random(mc.player.getBlockPos().getY() -y_range.get(), mc.player.getBlockPos().getY() + y_range.get());
+			y = Utils.random(mc.player.getBlockPos().getY() - Math.abs(y_range.get()), mc.player.getBlockPos().getY() + Math.abs(y_range.get()));
 			if (!scanned.contains(new BlockPos(x, y, z))) {
 				if (auto_dimension.get() && PlayerUtils.getDimension() == Dimension.Overworld) {
 					addBlock(new BlockPos(x, y, z), false);
